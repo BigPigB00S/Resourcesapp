@@ -1,22 +1,22 @@
 <template>
-   <li>
-      <div>
-         <header>
-            <h3>{{ title }}</h3>
-            <button>Delete</button>
-         </header>
-      </div>
+  <li>
+    <base-card>
+      <header>
+        <h3>{{ title }}</h3>
+        <base-button mode="flat">Delete</base-button>
+      </header>
       <p>{{ description }}</p>
       <nav>
-         <a :href="link">View Resource</a>
+        <a :href="link">View Resource</a>
       </nav>
-   </li>
+    </base-card>
+  </li>
 </template>
 
 <script>
-   export default {
-      props:['title', 'description', 'link']
-   }
+export default {
+  props: ['title', 'description', 'link'],
+};
 </script>
 
 <style scoped>
@@ -49,7 +49,4 @@ a:hover,
 a:active {
   color: #c89300;
 }
-
-
 </style>
-
